@@ -85,6 +85,8 @@
         background-size: 12.5vw auto;
         z-index: -1;
         pointer-events: none;
+        opacity: 0;
+        transition: opacity 180ms ease;
       }
 
       .accent-stage {
@@ -95,6 +97,13 @@
         justify-content: center;
         z-index: -2;
         pointer-events: none;
+        opacity: 0;
+        transition: opacity 180ms ease;
+      }
+
+      body.decor-ready::before,
+      body.decor-ready .accent-stage {
+        opacity: 1;
       }
 
       .stage {
@@ -180,6 +189,27 @@
         }
       }
     </style>
+    <script>
+      function loadDecor() {
+        const decorImage = new Image();
+        decorImage.src = "./bg4.png";
+        decorImage.decode?.().catch(() => {});
+        decorImage.onload = () => {
+          document.body.classList.add("decor-ready");
+        };
+        decorImage.onerror = () => {
+          document.body.classList.add("decor-ready");
+        };
+      }
+
+      window.addEventListener("load", () => {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(loadDecor, { timeout: 300 });
+        } else {
+          setTimeout(loadDecor, 120);
+        }
+      });
+    </script>
   </head>
   <body>
     <div class="accent-stage" aria-hidden="true">
@@ -188,7 +218,13 @@
     <main class="stage">
       <section class="brand-lockup" aria-label="LaRosmarina">
         <div class="hero">
-          <img class="hero-logo" src="./full_logo4.svg" alt="LaRosmarina" />
+          <img
+            class="hero-logo"
+            src="./full_logo4.svg"
+            alt="LaRosmarina"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high" />
         </div>
         <p class="hero-copy">
           <span>STIAMO COLTIVANDO IL VOSTRO</span>
