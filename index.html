@@ -1,209 +1,202 @@
 <!doctype html>
 <html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LaRosmarina</title>
-  <meta name="description" content="LaRosmarina e un'azienda italiana specializzata nella produzione di olio extravergine di oliva.">
-  <meta name="keywords" content="olio extravergine di oliva, olio EVO, azienda olivicola italiana, produzione olio d'oliva, frantoio italiano, olio d'oliva italiano, olive italiane, LaRosmarina">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="LaRosmarina">
-  <meta name="application-name" content="LaRosmarina">
-  <meta name="generator" content="Codex">
-  <meta name="theme-color" content="#111111">
-  <meta name="color-scheme" content="dark">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LaRosmarina</title>
+    <meta
+      name="description"
+      content="LaRosmarina e un'azienda italiana specializzata nella produzione di olio extravergine di oliva." />
+    <meta
+      name="keywords"
+      content="olio extravergine di oliva, olio EVO, azienda olivicola italiana, produzione olio d'oliva, frantoio italiano, olio d'oliva italiano, olive italiane, LaRosmarina" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="LaRosmarina" />
+    <meta name="application-name" content="LaRosmarina" />
+    <meta name="generator" content="Codex" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <link rel="canonical" href="https://larosmarina.com/">
+    <link rel="canonical" href="https://larosmarina.com/" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="LaRosmarina">
-  <meta property="og:description" content="Azienda italiana specializzata nella produzione di olio extravergine di oliva.">
-  <meta property="og:url" content="https://larosmarina.com/">
-  <meta property="og:site_name" content="LaRosmarina">
-  <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LaRosmarina" />
+    <meta
+      property="og:description"
+      content="Azienda italiana specializzata nella produzione di olio extravergine di oliva." />
+    <meta property="og:url" content="https://larosmarina.com/" />
+    <meta property="og:site_name" content="LaRosmarina" />
+    <meta property="og:locale" content="it_IT" />
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="LaRosmarina">
-  <meta name="twitter:description" content="Azienda italiana specializzata nella produzione di olio extravergine di oliva.">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="LaRosmarina" />
+    <meta
+      name="twitter:description"
+      content="Azienda italiana specializzata nella produzione di olio extravergine di oliva." />
 
-  <link rel="sitemap" type="application/xml" href="https://larosmarina.com/sitemap.xml">
+    <link
+      rel="sitemap"
+      type="application/xml"
+      href="https://larosmarina.com/sitemap.xml" />
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="LaRosmarina">
-  <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="LaRosmarina" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "LaRosmarina",
-      "url": "https://larosmarina.com/",
-      "description": "Azienda italiana specializzata nella produzione di olio extravergine di oliva."
-    }
-  </script>
-  <style>
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      background: #111;
-    }
-
-    body {
-      overflow: hidden;
-    }
-
-    #pdf-container {
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-
-    #pdf-container::-webkit-scrollbar {
-      display: none;
-    }
-
-    #pdf-stage {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-width: 100%;
-      min-height: 100%;
-    }
-
-    #pdf-canvas {
-      position: absolute;
-      image-rendering: auto;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
-    }
-
-    #pdf-status {
-      position: fixed;
-      inset: auto 1rem 1rem auto;
-      padding: 0.5rem 0.75rem;
-      color: #f3efe6;
-      background: rgba(17, 17, 17, 0.8);
-      font: 500 0.875rem/1.2 sans-serif;
-      letter-spacing: 0.02em;
-      border-radius: 999px;
-      opacity: 0;
-      transition: opacity 180ms ease;
-      pointer-events: none;
-    }
-
-    #pdf-status.is-visible {
-      opacity: 1;
-    }
-  </style>
-</head>
-<body>
-  <div id="pdf-container" aria-label="LaRosmarina brochure viewer">
-    <div id="pdf-stage">
-      <canvas id="pdf-canvas"></canvas>
-    </div>
-  </div>
-  <div id="pdf-status" role="status" aria-live="polite">Loading PDF</div>
-
-  <script>
-    const pdfContainer = document.getElementById("pdf-container");
-    const pdfStage = document.getElementById("pdf-stage");
-    const pdfCanvas = document.getElementById("pdf-canvas");
-    const pdfStatus = document.getElementById("pdf-status");
-    const portraitMobileQuery = window.matchMedia("(max-width: 767px) and (orientation: portrait)");
-
-    let pdfDoc;
-    let renderTask;
-    let resizeTimer;
-
-    function setStatus(message, isVisible) {
-      pdfStatus.textContent = message;
-      pdfStatus.classList.toggle("is-visible", Boolean(isVisible));
-    }
-
-    function centerCanvas(renderWidth, renderHeight) {
-      const stageWidth = Math.max(pdfContainer.clientWidth, renderWidth);
-      const stageHeight = Math.max(pdfContainer.clientHeight, renderHeight);
-
-      pdfStage.style.width = `${stageWidth}px`;
-      pdfStage.style.height = `${stageHeight}px`;
-      pdfCanvas.style.left = `${(stageWidth - renderWidth) / 2}px`;
-      pdfCanvas.style.top = `${(stageHeight - renderHeight) / 2}px`;
-
-      pdfContainer.scrollLeft = Math.max(0, (stageWidth - pdfContainer.clientWidth) / 2);
-      pdfContainer.scrollTop = Math.max(0, (stageHeight - pdfContainer.clientHeight) / 2);
-    }
-
-    async function renderPdfPage() {
-      if (!pdfDoc) {
-        return;
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LaRosmarina",
+        "url": "https://larosmarina.com/",
+        "description": "Azienda italiana specializzata nella produzione di olio extravergine di oliva."
+      }
+    </script>
+    <style>
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+        background: #ffffff;
       }
 
-      if (renderTask) {
-        renderTask.cancel();
+      body {
+        min-height: 100vh;
+        position: relative;
+        isolation: isolate;
+        background-color: #ffffff;
+        --logo-width: 40vw;
       }
 
-      const page = await pdfDoc.getPage(1);
-      const baseViewport = page.getViewport({ scale: 1 });
-      const fitByHeight = portraitMobileQuery.matches;
-      const scale = fitByHeight
-        ? pdfContainer.clientHeight / baseViewport.height
-        : pdfContainer.clientWidth / baseViewport.width;
-      const viewport = page.getViewport({ scale });
-      const outputScale = window.devicePixelRatio || 1;
-      const context = pdfCanvas.getContext("2d");
+      body::before {
+        content: "";
+        position: fixed;
+        inset: clamp(3rem, 6vw, 5rem);
+        background-color: transparent;
+        background-image: url("./bg4.png");
+        background-position: top left;
+        background-repeat: repeat;
+        background-size: 12.5vw auto;
+        z-index: -1;
+        pointer-events: none;
+      }
 
-      pdfCanvas.width = Math.floor(viewport.width * outputScale);
-      pdfCanvas.height = Math.floor(viewport.height * outputScale);
-      pdfCanvas.style.width = `${viewport.width}px`;
-      pdfCanvas.style.height = `${viewport.height}px`;
+      .accent-stage {
+        position: fixed;
+        inset: clamp(3rem, 6vw, 5rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -2;
+        pointer-events: none;
+      }
 
-      context.setTransform(outputScale, 0, 0, outputScale, 0, 0);
-      centerCanvas(viewport.width, viewport.height);
+      .stage {
+        position: fixed;
+        inset: clamp(3rem, 6vw, 5rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-      renderTask = page.render({
-        canvasContext: context,
-        viewport
-      });
+      .brand-lockup {
+        width: var(--logo-width);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1rem, 1.8vw, 1.5rem);
+      }
 
-      try {
-        await renderTask.promise;
-        setStatus("", false);
-      } catch (error) {
-        if (error?.name !== "RenderingCancelledException") {
-          setStatus("Unable to render PDF", true);
-          throw error;
+      .hero {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-accent {
+        width: 46vw;
+        aspect-ratio: 3 / 2;
+        background: #205356;
+      }
+
+      .hero-logo {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        z-index: 1;
+      }
+
+      .hero-copy {
+        width: 75%;
+        margin: 0;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-size: calc(var(--logo-width) * 0.0275);
+        font-weight: 200;
+        line-height: 1.2;
+        letter-spacing: 0.12em;
+        text-align: center;
+      }
+
+      .hero-copy span {
+        display: block;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          --logo-width: 70vw;
+        }
+
+        body::before {
+          inset: clamp(1rem, 6vw, 2rem);
+          background-size: min(14rem, 44vw) auto;
+        }
+
+        .accent-stage {
+          inset: clamp(1rem, 6vw, 2rem);
+        }
+
+        .stage {
+          inset: clamp(1rem, 6vw, 2rem);
+        }
+
+        .hero-accent {
+          width: 78vw;
+          aspect-ratio: 3 / 4;
+        }
+
+        .hero-copy {
+          font-size: calc(var(--logo-width) * 0.04125);
         }
       }
-    }
-
-    async function initPdfViewer() {
-      try {
-        setStatus("Loading PDF", true);
-        const pdfjsLib = await import("./assets/pdfjs/pdf.min.mjs");
-
-        pdfjsLib.GlobalWorkerOptions.workerSrc = "./assets/pdfjs/pdf.worker.min.mjs";
-
-        pdfDoc = await pdfjsLib.getDocument("background.pdf").promise;
-        await renderPdfPage();
-      } catch (error) {
-        setStatus("Unable to load PDF", true);
-        console.error(error);
-      }
-    }
-
-    function handleResize() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        renderPdfPage();
-      }, 120);
-    }
-
-    initPdfViewer();
-    portraitMobileQuery.addEventListener("change", handleResize);
-    window.addEventListener("resize", handleResize);
-  </script>
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="accent-stage" aria-hidden="true">
+      <div class="hero-accent"></div>
+    </div>
+    <main class="stage">
+      <section class="brand-lockup" aria-label="LaRosmarina">
+        <div class="hero">
+          <img class="hero-logo" src="./full_logo3.svg" alt="LaRosmarina" />
+        </div>
+        <p class="hero-copy">
+          <span>STIAMO COLTIVANDO IL VOSTRO</span>
+          <span>OLIO EXTRA VERGINE NEL CUORE</span>
+          <span>DELLA MAREMMA.</span>
+          <span>RIGOROSAMENTE BIOLOGICO</span>
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
