@@ -53,7 +53,7 @@
       overflow: hidden;
     }
 
-    embed {
+    iframe {
       display: block;
       width: 100%;
       height: 100%;
@@ -62,6 +62,25 @@
   </style>
 </head>
 <body>
-  <embed src="background.pdf#view=FitH" type="application/pdf">
+  <iframe id="pdf-viewer" title="LaRosmarina brochure" src="background.pdf#view=FitH"></iframe>
+
+  <script>
+    const pdfViewer = document.getElementById("pdf-viewer");
+    const portraitMobileQuery = window.matchMedia("(max-width: 767px) and (orientation: portrait)");
+
+    function updatePdfView() {
+      const view = portraitMobileQuery.matches ? "FitV" : "FitH";
+      const nextSrc = `background.pdf#view=${view}`;
+
+      if (pdfViewer.dataset.view !== view) {
+        pdfViewer.dataset.view = view;
+        pdfViewer.src = nextSrc;
+      }
+    }
+
+    updatePdfView();
+    portraitMobileQuery.addEventListener("change", updatePdfView);
+    window.addEventListener("resize", updatePdfView);
+  </script>
 </body>
 </html>
